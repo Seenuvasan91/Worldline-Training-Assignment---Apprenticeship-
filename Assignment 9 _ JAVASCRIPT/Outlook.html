@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Ticket Booking</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			font-family: Arial, sans-serif;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f1f1f1;
+		}
+		header {
+			background-color: #333;
+			color: white;
+			padding: 20px;
+			text-align: center;
+			font-size: 30px;
+		}
+		nav {
+			float: left;
+			width: 20%;
+			height: 100vh;
+			background-color: #555;
+			padding: 20px;
+		}
+		nav ul {
+			list-style: none;
+			padding: 0;
+		}
+		nav li {
+			margin: 10px 0;
+		}
+		nav a {
+			color: white;
+			text-decoration: none;
+			font-size: 20px;
+			display: block;
+			padding: 10px;
+			border-radius: 5px;
+			transition: background-color 0.3s;
+		}
+		nav a:hover {
+			background-color: #f1f1f1;
+			color: #555;
+		}
+		.main {
+			float: left;
+			padding: 0 20px;
+			width: 80%;
+			height: 100vh;
+			background-color: white;
+			overflow: scroll;
+		}
+		h2 {
+			text-align: center;
+			font-size: 30px;
+			margin-top: 20px;
+		}
+		.form-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		form {
+			width: 80%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.form-control {
+			margin: 10px;
+			flex: 0 0 25%;
+			max-width: 25%;
+			min-width: 200px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		label {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		select {
+			font-size: 16px;
+			padding: 10px;
+			border-radius: 5px;
+		}
+		.seat-container {
+			margin-top: 50px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+		}
+		.seat {
+			background-color: #00ff00;
+			border: none;
+			padding: 10px;
+			margin: 10px;
+			font-size: 16px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.booked {
+			background-color: #0000ff;
+			cursor: not-allowed;
+		}
+		.selected {
+			background-color: yellow;
+		}
+		.book-button {
+			margin-top: 20px;
+			padding: 10px;
+			font-size: 20px;
+			border-radius: 5px;
+			background-color: #4CAF50;
+			color: white;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		.book-button:hover {
+			background-color: #3e8e41;
+		}
+		.cancel-button {
+			margin-left: 10px;
+			background-color: red;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			}
+			.cancel-button:hover {
+			background-color: darkred;
+			}
+			</style>
+
+			</head>
+			<body>
+				<div class="container">
+					<h1>Movie Ticket Booking</h1>
+					<nav>
+						<ul>
+							<li><a href="#booking">Booking Page</a></li>
+							<li><a href="#now-showing">Now Showing</a></li>
+						</ul>
+					</nav>
+					<section id="booking">
+						<h2>Booking Page</h2>
+						<div class="movie-select">
+							<label for="movie-select">Select a movie:</label>
+							<select name="movie-select" id="movie-select">
+								<option value="inception">Inception</option>
+								<option value="interstellar">Interstellar</option>
+								<option value="the-dark-knight">The Dark Knight</option>
+							</select>
+						</div>
+						<div class="seats">
+							<h3>Available Seats:</h3>
+							<div class="seat-row">
+								<span class="seat available">1</span>
+								<span class="seat available">2</span>
+								<span class="seat available">3</span>
+								<span class="seat available">4</span>
+								<span class="seat available">5</span>
+							</div>
+							<div class="seat-row">
+								<span class="seat available">6</span>
+								<span class="seat available">7</span>
+								<span class="seat available">8</span>
+								<span class="seat available">9</span>
+								<span class="seat available">10</span>
+							</div>
+							<div class="seat-row">
+								<span class="seat available">11</span>
+								<span class="seat available">12</span>
+								<span class="seat available">13</span>
+								<span class="seat available">14</span>
+								<span class="seat available">15</span>
+							</div>
+							<div class="seat-row">
+								<span class="seat available">16</span>
+								<span class="seat available">17</span>
+								<span class="seat available">18</span>
+								<span class="seat available">19</span>
+								<span class="seat available">20</span>
+							</div>
+							<div class="seat-row">
+								<span class="seat available">21</span>
+								<span class="seat available">22</span>
+								<span class="seat available">23</span>
+								<span class="seat available">24</span>
+								<span class="seat available">25</span>
+							</div>
+							<div class="seat-row">
+								<span class="seat available">26</span>
+								<span class="seat available">27</span>
+								<span class="seat available">28</span>
+								<span class="seat available">29</span>
+								<span class="seat available">30</span>
+							</div>
+						</div>
+						<div class="selected-seats">
+							<h3>Selected Seats:</h3>
+							<p>No seats selected</p>
+							<button class="cancel-button">Cancel</button>
+						</div>
+						<div class="total">
+							<p>Total
+								<!DOCTYPE html>
+								<html lang="en">
+
+								<head>
+								<meta charset="UTF-8">
+								<meta name="viewport" content="width=device-width, initial-scale=1.0">
+								<meta http-equiv="X-UA-Compatible" content="ie=edge">
+								<title>Movie Ticket Booking</title>
+								<link rel="stylesheet" href="style.css">
+								</head>
+
+								<body>
+								<nav>
+									<div class="container">
+									<h1 class="logo">Movie Ticket Booking</h1>
+									<ul class="nav-links">
+										<li><a href="#">Booking Page</a></li>
+										<li><a href="#">Now Showing</a></li>
+									</ul>
+									</div>
+								</nav>
+
+								<section id="booking-page">
+									<div class="container">
+									<h2 class="section-title">Booking Page</h2>
+									<form id="booking-form">
+										<div class="form-group">
+										<label for="movie-select">Select a Movie:</label>
+										<select id="movie-select">
+											<option value="" disabled selected>Select a movie</option>
+											<option value="1">The Avengers</option>
+											<option value="2">The Lion King</option>
+											<option value="3">Jurassic Park</option>
+										</select>
+										</div>
+
+										<div class="seats-container">
+										<h3>Seats:</h3>
+										<div id="seats"></div>
+										</div>
+
+										<div class="form-group">
+										<label for="total-price">Total Price:</label>
+										<input type="text" id="total-price" name="total-price" readonly>
+										</div>
+
+										<div class="form-group">
+										<button type="submit" class="submit-button">Book Now</button>
+										<button type="button" class="cancel-button">Cancel</button>
+										</div>
+									</form>
+
+									<div id="timer"></div>
+
+									<div id="search-container">
+										<h3>Search Movies:</h3>
+										<input type="text" id="search-box" placeholder="Search by title...">
+										<div id="search-results"></div>
+									</div>
+
+									<div id="filter-container">
+										<h3>Filter Movies:</h3>
+										<div class="checkbox">
+										<input type="checkbox" id="action" name="genre" value="Action">
+										<label for="action">Action</label>
+										</div>
+										<div class="checkbox">
+										<input type="checkbox" id="comedy" name="genre" value="Comedy">
+										<label for="comedy">Comedy</label>
+										</div>
+										<div class="checkbox">
+										<input type="checkbox" id="drama" name="genre" value="Drama">
+										<label for="drama">Drama</label>
+										</div>
+										<div id="filter-results"></div>
+									</div>
+									</div>
+								</section>
+
+								<section id="now-showing-page">
+									<div class="container">
+									<h2 class="section-title">Now Showing</h2>
+									<div class="movie">
+										<img src="https://via.placeholder.com/200x300" alt="Movie Poster">
+										<h3>The Avengers</h3>
+										<p>Genre: Action</p>
+										<p>Duration: 2h 23min</p>
+										<p>Rating: PG-13</p>
+									</div>
+									<div class="movie">
+										<img src="movie3.jpg" alt="Movie 3">
+										<h3>The Great Escape</h3>
+										<p>Genre: Drama</p>
+										<p>Duration: 2h 52min</p>
+										<p>Rating: G</p>
+									  </div>
+									  <div class="movie">
+										<img src="movie4.jpg" alt="Movie 4">
+										<h3>The Last Samurai</h3>
+										<p>Genre: Action</p>
+										<p>Duration: 2h 34min</p>
+										<p>Rating: R</p>
+									  </div>
+									  <div class="movie">
+										<img src="movie5.jpg" alt="Movie 5">
+										<h3>The Shawshank Redemption</h3>
+										<p>Genre: Drama</p>
+										<p>Duration: 2h 22min</p>
+										<p>Rating: R</p>
+									  </div>
+									</div>
+									  </div>
+									</body>
+									</html>
+

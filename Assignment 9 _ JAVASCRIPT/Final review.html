@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Ticket Booking</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Movie Ticket Booking</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Booking</a></li>
+				<li><a href="#">Now Showing</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="booking">
+			<h2>Booking</h2>
+			<div id="movie-selection">
+				<label for="movies">Select a movie:</label>
+				<select name="movies" id="movies">
+					<option value="movie1">Movie 1</option>
+					<option value="movie2">Movie 2</option>
+					<option value="movie3">Movie 3</option>
+				</select>
+			</div>
+			<div id="seat-selection">
+				<h3>Seat Selection</h3>
+				<div id="seat-map"></div>
+				<p>Total Seats: <span id="total-seats"></span></p>
+				<p>Total Price: $<span id="total-price"></span></p>
+				<form>
+					<input type="submit" value="Book Now">
+				</form>
+			</div>
+		</section>
+		<section id="now-showing">
+			<h2>Now Showing</h2>
+			<div id="movie-list">
+				<ul>
+					<li>
+						<h3>Movie 1</h3>
+						<p>Genre: Action</p>
+						<p>Duration: 120 minutes</p>
+					</li>
+					<li>
+						<h3>Movie 2</h3>
+						<p>Genre: Comedy</p>
+						<p>Duration: 90 minutes</p>
+					</li>
+					<li>
+						<h3>Movie 3</h3>
+						<p>Genre: Drama</p>
+						<p>Duration: 110 minutes</p>
+					</li>
+				</ul>
+			</div>
+			<div id="search-movie">
+				<label for="movie-search">Search by movie title:</label>
+				<input type="text" name="movie-search" id="movie-search">
+			</div>
+			<div id="filter-genre">
+				<label for="genre-filter">Filter by genre:</label>
+				<select name="genre-filter" id="genre-filter">
+					<option value="all">All</option>
+					<option value="action">Action</option>
+					<option value="comedy">Comedy</option>
+					<option value="drama">Drama</option>
+				</select>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Movie Ticket Booking</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>

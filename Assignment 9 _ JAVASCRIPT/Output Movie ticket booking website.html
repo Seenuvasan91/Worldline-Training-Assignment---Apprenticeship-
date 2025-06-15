@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Ticket Booking website _ Seenuvasan</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #ADD8E6;
+			color: #333;
+			margin: 0;
+		}
+
+		header {
+			background-color: #BE398D;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: 2.5em;
+			font-weight: normal;
+		}
+
+		nav {
+			background-color: #ccc;
+			padding: 10px;
+			text-align: center;
+		}
+
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		nav li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+
+		nav a {
+			color: #333;
+			text-decoration: none;
+			padding: 5px;
+			border-radius: 5px;
+			background-color: #fff;
+		}
+
+		nav a:hover {
+			background-color: #333;
+			color: #fff;
+		}
+
+		main {
+			margin: 20px;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		}
+
+		h2 {
+			font-size: 1.5em;
+			margin-top: 0;
+		}
+
+		form {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			grid-gap: 10px;
+		}
+
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+
+		input[type="text"],
+		input[type="password"],
+		select {
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 100%;
+		}
+
+		select {
+			margin-bottom: 10px;
+		}
+
+		input[type="submit"],
+		input[type="reset"] {
+			padding: 5px;
+			border-radius: 5px;
+			border: none;
+			background-color: #333;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover {
+			background-color: #800080;
+			color: #800080;
+		}
+
+		input:invalid {
+			border-color: red;
+		}
+
+		input:valid {
+			border-color: green;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Movie Ticket Booking website _ Seenuvasan</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="#booking">Booking Page</a></li>
+			<li><a href="#now-showing">Now Showing</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<section id="booking">
+			<h2>Booking Page</h2>
+			<form>
+				<label for="movie">Select a Movie:</label>
+				<select id="movie" name="movie">
+					<option value="Avengers: Endgame">Avengers: Endgame</option>
+					<option value="The Dark Knight">The Dark Knight</option>
+				<option value="Titanic">Titanic</option>
+				<option value="The Lion King">The Lion King</option>
+				<option value="Star Wars: The Rise of Skywalker">Star Wars: The Rise of Skywalker</option>
+			</select>
+
+			<label for="seats">Available Seats:</label>                          
+			<ul id="seats">
+				<li class="available">1</li>
+				<li class="available">2</li>
+				<li class="available">3</li>
+				<li class="available">4 - selected</li>
+				<li class="booked">5 - selected</li>
+				<li class="booked">6</li>
+				<li class="booked">7</li>
+				<li class="booked">8 - selected</li>
+				<li class="booked">9</li>
+				<li class="booked">10</li>
+			</ul>
+
+			<label for="seats">Booked seats:</label>
+			<ul id="seats">
+				<li class="available">11</li>
+				<li class="available">12</li>
+				<li class="available">13</li>
+				<li class="available">14</li>
+				<li class="booked">15</li>
+				<li class="booked">16</li>
+				<li class="booked">17</li>
+				<li class="booked">18</li>
+				<li class="booked">19</li>
+				<li class="booked">20</li>
+			</ul>
+
+			<label for="Total no.of.seats booked">Number of seats booked:</label>
+			<input type="text" id="Booked" name="booked" placeholder="Total number of seats booked" required>
+
+			<label for="Total Price">Total Price:</label>
+			<input type="Total Price" id="Total Price" name="Total Price" placeholder="Enter your Total Price" required>
+
+			<label for="mobile">Movie Genre:</label>
+			<input type="tel" id="mobile" name="mobile" name="Movie Genre" placeholder="Enter your Movie Genre" required>
+
+			<label for="Time left for next show">Time left for next show:</label>
+			<input type="text" id="Time left for next show" name="Time left for next show" placeholder="[0-60]:[0-60]" placeholder="Time left" required>
+
+			<input type="submit" value="Submit">
+			<input type="reset" value="Cancel">
+		</form>
+	</section>
+
+	<section id="now-showing">
+		<h2>Now Showing</h2>
+		<ul>
+			<li><strong>Avengers: Endgame</strong> - 12:00 PM, 3:00 PM, 6:00 PM</li>
+			<li><strong>The Dark Knight</strong> - 11:00 AM, 2:00 PM, 5:00 PM, 8:00 PM</li>
+			<li><strong>Titanic</strong> - 10:00 AM, 1:00 PM, 4:00 PM, 7:00 PM</li>
+			<li><strong>The Lion King</strong> - 11:00 AM, 2:00 PM, 5:00 PM, 8:00 PM</li>
+			<li><strong>Star Wars: The Rise of Skywalker</strong> - 12:00 PM, 3:00 PM, 6:00 PM, 9:00 PM</li>
+		</ul>
+	</section>
+</main>
+</body>
+</html>
